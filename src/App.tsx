@@ -11,6 +11,8 @@ function App() {
         {id: 3, title: "JS", isDone: false},
         {id: 4, title: "GrapghQL", isDone: false},
         {id: 5, title: "Tesla", isDone: false},
+        {id: 6, title: "fsefsfeaesla", isDone: false},
+
     ])
     let [filtered, Setfiltered] = useState<FilteredType>("all")
     let FilteredTasks = task
