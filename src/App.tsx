@@ -1,28 +1,17 @@
 import React from 'react';
 import './App.css';
+import {Todolist} from "./Todolist";
+import {task1, task2} from "./MassiveObj";
 
 function App() {
     return (
         <div className="App">
-            <div>
-                <h3>What to learn</h3>
-                <div>
-                    <input/>
-                    <button>+</button>
-                </div>
-                <ul>
-                    <li><input type="checkbox" checked={true}/> <span>HTML&CSS</span></li>
-                    <li><input type="checkbox" checked={true}/> <span>JS</span></li>
-                    <li><input type="checkbox" checked={false}/> <span>React</span></li>
-                </ul>
-                <div>
-                    <button>All</button>
-                    <button>Active</button>
-                    <button>Completed</button>
-                </div>
-            </div>
+        <Todolist title={"What to learn"} massive={task1}/>
+        <Todolist title={"What to sing"} massive={task2}/>
+
         </div>
-    );
+)
+
 }
 
 export default App;
