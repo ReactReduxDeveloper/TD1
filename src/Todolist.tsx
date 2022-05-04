@@ -1,14 +1,17 @@
 import React from 'react';
+
 type PropsType = {
-    title:string
-massive:Array<MassiveType>
+    title: string
+    massive: Array<MassiveType>
+    removeFunction: (id: number) => void
 }
 type MassiveType = {
     id: number
-    title:string
-    isDone:boolean
+    title: string
+    isDone: boolean
 }
-export const Todolist = (props:PropsType)=> {
+export const Todolist = (props: PropsType) => {
+
     return (
         <div>
             <div>
@@ -18,9 +21,17 @@ export const Todolist = (props:PropsType)=> {
                     <button>+</button>
                 </div>
                 <ul>
-                    <li><input type="checkbox" checked={props.massive[0].isDone}/> <span>{props.massive[0].title}</span></li>
-                    <li><input type="checkbox" checked={props.massive[1].isDone}/> <span>{props.massive[1].title}</span></li>
-                    <li><input type="checkbox" checked={props.massive[2].isDone}/> <span>{props.massive[2].title}</span></li>
+                    {
+                        props.massive.map(el =>
+                            <li>
+                                <input type="checkbox" checked={el.isDone}/>
+                                <span>{el.title}</span>
+                                <button onClick={() => {props.removeFunction(el.id)
+                                }}>X
+                                </button>
+
+                            </li>
+                        )}
                 </ul>
                 <div>
                     <button>All</button>
