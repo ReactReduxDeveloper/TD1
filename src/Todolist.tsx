@@ -4,6 +4,7 @@ type PropsType = {
     title: string
     massive: Array<MassiveType>
     removeFunction: (id: number) => void
+    FilteredFunction:(value:)
 }
 type MassiveType = {
     id: number
@@ -23,7 +24,7 @@ export const Todolist = (props: PropsType) => {
                 <ul>
                     {
                         props.massive.map(el =>
-                            <li>
+                            <li key={el.id}>
                                 <input type="checkbox" checked={el.isDone}/>
                                 <span>{el.title}</span>
                                 <button onClick={() => {props.removeFunction(el.id)
