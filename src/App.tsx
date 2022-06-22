@@ -13,6 +13,7 @@ function App() {
         {id: 5, title: "Tesla", isDone: false},
         {id: 6, title: "fsefsfeaesla", isDone: false},
         {id: 7, title: "вркярпка", isDone: false},
+        {id: 8, title: "gresfesfa", isDone: false},
 
 
     ])
