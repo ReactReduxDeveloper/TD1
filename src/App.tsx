@@ -12,6 +12,8 @@ function App() {
         {id: 4, title: "GrapghQL", isDone: false},
         {id: 5, title: "Tesla", isDone: false},
         {id: 6, title: "fsefsfeaesla", isDone: false},
+        {id: 7, title: "вркярпка", isDone: false},
+
 
     ])
     let [filtered, Setfiltered] = useState<FilteredType>("all")
